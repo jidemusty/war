@@ -44,4 +44,8 @@ class Deck:
   def size(self) -> int:
     return len(self._cards) 
 
+  def clone(self) -> 'Deck' : 
+    """ returns a clone copy of this deck """
+    pass 
+
 
