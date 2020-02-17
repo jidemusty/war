@@ -12,7 +12,7 @@ class Player:
   def getId(self):
     return self._name 
 
-  def setDeck(self,deck: Deck): 
+  def setDeck(self, deck: Deck): 
     self._deck = deck 
 
   def getDeckTopCard(self) -> Card: 

@@ -15,5 +15,3 @@ class SimpleShuffleStrategy(DeckShuffleStrategy):
     random.shuffle(cards) 
     #:: put it pack in the deck. 
     deck.extend(cards)
-  
-    # pass #TODO: implement later. 

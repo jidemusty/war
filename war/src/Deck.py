@@ -1,6 +1,5 @@
-from src.Card import Card 
-
-from collections import deque 
+from src.Card import Card
+from collections import deque
 from typing import List, Iterable
 
 class Deck: 

@@ -1,5 +1,5 @@
 import unittest 
-from src.Card import Card , Rank, Suite 
+from src.Card import Card, Rank, Suite 
 
 class CardTestCase(unittest.TestCase):
   def test_cardInitialization(self):
@@ -12,7 +12,6 @@ class CardTestCase(unittest.TestCase):
     card = Card(Rank.ACE, Suite.HEART) 
     self.assertEqual(card.getRank(), Rank.ACE) 
     self.assertEqual(card.getSuite(), Suite.HEART) 
-
 
 
 """

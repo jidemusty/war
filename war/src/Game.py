@@ -1,5 +1,3 @@
-
-
 from src.Player import Player 
 from src.Deck import Deck 
 from src.Card import Card, Rank, RankScore  
@@ -7,16 +5,13 @@ from src.Card import Card, Rank, RankScore
 from typing import Iterable, Tuple, List 
 from enum import Enum 
 
-
-
 class GameStatus: 
   WAR = 'WAR'
   WIN = 'WIN'
   BATTLE = 'BATTLE' 
 
-
 class Game: 
-  def __init__(self,playing_deck: Deck, players: Iterable[Player], shuffle_strategy: DeckShuffleStrategy, rank_score_strategy: RankScore):
+  def __init__(self, playing_deck: Deck, players: Iterable[Player], shuffle_strategy: DeckShuffleStrategy, rank_score_strategy: RankScore):
     self._players = players #:: deck must be even in length / divisible by the number of players. 
     #:: this represents the card deck for the game. 
     self._playing_deck = playing_deck
@@ -36,6 +31,7 @@ class Game:
     next_player = 0 
     expected_count = (deck.size() // num_players) * num_players 
     count = 0 
+
     while (~deck.isEmpty() and count < expected_count):
       card = deck.popTopCard() 
       self._players[next_player].addToDeckBottom([card]) 
@@ -76,7 +72,7 @@ class Game:
     #::sort the plays in decreasing order. 
     #::for the key, use the first item which is the card. 
     sort_key = lambda item: self._rank_score_strategy.getScore(item[0].getRank())
-    plays.sort( key = sort_key , reversed=True)
+    plays.sort(key = sort_key, reversed=True)
 
     return plays 
 
@@ -86,7 +82,7 @@ class Game:
   def _makeBattlePlay(self):
     #:: check if we have a winner. 
     self._checkForWinner()
-    if ( self.getStatus() == GameStatus.WIN): 
+    if (self.getStatus() == GameStatus.WIN): 
       # we have a winner. 
       return 
     # make a play. 
