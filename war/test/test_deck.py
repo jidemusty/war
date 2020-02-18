@@ -1,5 +1,5 @@
 import unittest 
-from src.Card import Card , Rank, Suite 
+from src.Card import Card, Rank, Suite 
 from src.Deck import Deck 
 
 class DeckTestCase(unittest.TestCase):
@@ -7,7 +7,6 @@ class DeckTestCase(unittest.TestCase):
     """ test desck initialization """
     deck = Deck() 
     self.assertEqual(deck.isEmpty(), True) 
-
 
   def test_popTopCard_returnsNoneIfEmpty(self):
     deck  = Deck() 

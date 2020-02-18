@@ -13,7 +13,6 @@ class CardTestCase(unittest.TestCase):
     self.assertEqual(card.getRank(), Rank.ACE) 
     self.assertEqual(card.getSuite(), Suite.HEART) 
 
-
 """
 python3 -m unittest discover -s test -p "test_*.py"
 """
