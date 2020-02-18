@@ -9,6 +9,9 @@ class Player:
     self._deck = None 
     self.setDeck(deck) 
 
+  def getDeckSize(self):
+    return self._deck.size() 
+
   def getName(self):
     return self._name 
 
@@ -26,4 +29,9 @@ class Player:
     """ adds the list of cards to bottom of deck """
     self._deck.extend(cards)
 
-  
+  def printDeck(self):
+    deck_str = str(self._deck)
+    print("[{}]: {}".format(self.getName(), deck_str))
+
+  def __str__(self):
+    return self.getName() 

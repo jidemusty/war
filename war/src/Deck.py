@@ -33,8 +33,12 @@ class Deck:
       Iterable of Card 
     """
     tmp = self._cards 
-    self._cards = [] 
+    self._cards = deque()
     return tmp  
+
+  def getCards(self) -> Iterable[Card]:
+    """ returns a list of al lthe cards in deck """
+    return self._cards 
 
   def extend(self, cards: Iterable[Card]):
     """ extends the current deck by appending all cards in @param deck into the curent deck"""
@@ -43,8 +47,8 @@ class Deck:
   def size(self) -> int:
     return len(self._cards) 
 
-  def clone(self) -> 'Deck' : 
-    """ returns a clone copy of this deck """
-    pass 
-
-
+  def __str__(self) -> str: 
+    result = ["Deck: "]
+    for card in self._cards:
+      result.append(str(card))
+    return " ".join(result) 
