@@ -1,3 +1,6 @@
+# To play game
+ - run main.py
+
 # Instructions to install
  - add repo directory PYTHONPATH environment variable e.g ```export PYTHONPATH=$PWD:$PYTHONPATH```
  - run main.py
