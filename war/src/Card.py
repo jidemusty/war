@@ -58,3 +58,6 @@ class Card:
     """ compare if two cards are equal """ 
     return (self.getRank() == other.getRank() and self.getSuite() == other.getSuite())
 
+  def __ne__(self, other: 'Card') -> bool:
+    """  """
+    return not (self == other)

@@ -9,17 +9,18 @@ class Player:
     self._deck = None 
     self.setDeck(deck) 
 
-  def getId(self):
+  def getName(self):
     return self._name 
 
   def setDeck(self, deck: Deck): 
     self._deck = deck 
 
-  def getDeckTopCard(self) -> Card: 
-    return self._deck.getCardOnTop() 
+  def popDeckTopCard(self) -> Card: 
+    """ pop the card at the top of the player's deck and returns it """
+    return self._deck.popTopCard() 
 
   def isDeckEmpty(self):
-    return self._deck.isDeckEmpty() 
+    return self._deck.isEmpty() 
 
   def addToDeckBottom(self, cards: Iterable[Card]):
     """ adds the list of cards to bottom of deck """

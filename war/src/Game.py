@@ -64,7 +64,7 @@ class Game:
     """ gets all the top cards from the players, and adds it to current deck """
     plays = []
     for player in self._players: 
-      card = player.getDeckTopCard()
+      card = player.popDeckTopCard()
       #: add the card to the current playing deck. 
       self._current_play_deck.pushToTop(card) 
 
