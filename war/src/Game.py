@@ -37,7 +37,7 @@ class Game:
     expected_count = (deck.size() // num_players) * num_players 
     count = 0 
 
-    while (~deck.isEmpty() and count < expected_count):
+    while (not deck.isEmpty() and count < expected_count):
       card = deck.popTopCard() 
       self._players[next_player].addToDeckBottom([card]) 
       next_player = (next_player + 1) % num_players
